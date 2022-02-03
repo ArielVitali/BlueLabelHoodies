@@ -1,0 +1,642 @@
+/* Estilos generales */
+
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+/* Nombrar las areas */
+
+
+header {
+    grid-area: cabeza;
+    padding: 10px;
+    margin: 5px;
+}
+
+nav {
+    grid-area: menu;
+    margin: 5px;
+}
+
+footer {
+    grid-area: pie;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* AREAS INDEX */
+#portada {
+    grid-area: portada;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+#productosNuevos {
+    grid-area: productosNuevos;
+    margin: 5px;
+    padding: 10px;    
+}
+
+#singUpForNews {
+    grid-area: singUpForNews;
+    margin: 5px;
+    padding: 10px;    
+}
+
+/* AREAS SHOP */
+
+#titulo{
+    grid-area: titulo;
+    margin: 5px;
+    padding: 10px;
+}
+
+#productos {
+    grid-area: portada;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* AREAS PHOTOS */
+
+/* AREA ABOUT */
+
+#texto{
+    grid-area: texto;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* AREA COLLECTION */
+
+#colleccion{
+    grid-area: colleccion;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+/* RESPONSIVE */
+
+/* Desktop */
+@media (min-width:1024px){
+
+    body{
+        width: 100%;
+    }
+    
+    header{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        color: black;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+        
+    span{
+        margin-bottom: 5px;
+        margin: 3px;
+        padding: 20px;
+        height: 20px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    
+    span:hover{
+        background-color: rgb(167, 165, 164);
+    }
+
+    nav{
+       font-weight: bold;
+    }
+
+    p{
+        margin: 5px;
+    }
+    
+
+    
+    /* GRIDS POR AREAS */
+
+    .gridAreasIndex{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza cabeza cabeza "  /* fila 1 */
+       "menu menu menu menu" /* fila 2 */
+       "portada portada portada portada" /* fila 3 */
+       "productosNuevos productosNuevos productosNuevos productosNuevos"
+       "singUpForNews singUpForNews singUpForNews singUpForNews" /* fila 4 */
+       "pie pie pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-rows: 100%;
+       grid-template-columns: 100%;
+    }
+
+    .gridAreasShop{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza cabeza cabeza "  /* fila 1 */
+       "menu menu menu menu" /* fila 2 */
+       "titulo titulo titulo titulo"
+       "productos productos productos productos" /* fila 3 */
+       "singUpForNews singUpForNews singUpForNews singUpForNews" /* fila 4 */
+       "pie pie pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasAbout{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza cabeza cabeza "  /* fila 1 */
+       "menu menu menu menu" /* fila 2 */
+       "titulo titulo titulo titulo"
+       "texto texto texto texto" /* fila 3 */
+       "singUpForNews singUpForNews singUpForNews singUpForNews" /* fila 4 */
+       "pie pie pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasColleccion{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza cabeza cabeza "  /* fila 1 */
+       "menu menu menu menu" /* fila 2 */
+       "titulo titulo titulo titulo"
+       "colleccion colleccion colleccion colleccion" /* fila 3 */
+       "singUpForNews singUpForNews singUpForNews singUpForNews" /* fila 4 */
+       "pie pie pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    
+
+     /* menu flex */
+     .flexMenu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+     }
+    
+     /* galeria flex */
+     .productosFlex{
+         display: flex;
+         flex-direction: row;
+         justify-content:space-between;
+     }
+
+     /* redes flex */
+
+     .redesFlex{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 10px;
+     }
+
+     /* New & Trending */
+
+     .centrar{
+         display: flex;
+         flex-direction: column;
+         text-align: center;  
+     }
+
+     .color{
+        color: black;
+        font-weight: bold;
+    }
+
+     /* SHOP */
+
+     /* texto de producto */
+     .caption{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .productosFlexShop{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* ABOUT */
+
+    .textoIzquierda{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 50px;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1023px){
+
+    body{
+        width: 100%;
+    }
+    
+    header{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        color: black;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    
+    
+    span{
+        margin-bottom: 5px;
+        margin: 3px;
+        padding: 20px;
+        height: 20px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    
+    span:hover{
+        background-color: rgb(167, 165, 164);
+    }
+
+    nav{
+       font-weight: bold;
+    }
+
+    p{
+        margin: 5px;
+    }
+
+    
+
+
+     /* GRIDS POR AREAS */
+    
+    
+     .gridAreasIndex{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza"  /* fila 1 */
+       "menu menu" /* fila 2 */
+       "portada portada " /* fila 3 */
+       "productosNuevos productosNuevos"
+       "singUpForNews singUpForNews" /* fila 4 */
+       "pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasShop{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza "  /* fila 1 */
+       "menu menu " /* fila 2 */
+       "titulo titulo"
+       "productos productos" /* fila 3 */
+       "singUpForNews singUpForNews" /* fila 4 */
+       "pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasAbout{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza"  /* fila 1 */
+       "menu menu" /* fila 2 */
+       "titulo titulo"
+       "texto texto" /* fila 3 */
+       "singUpForNews singUpForNews" /* fila 4 */
+       "pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasColleccion{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza cabeza cabeza cabeza "  /* fila 1 */
+       "menu menu menu menu" /* fila 2 */
+       "titulo titulo titulo titulo"
+       "colleccion colleccion colleccion colleccion" /* fila 3 */
+       "singUpForNews singUpForNews singUpForNews singUpForNews" /* fila 4 */
+       "pie pie pie pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    
+
+
+      /* MENU FLEX */
+      .flexMenu{
+        display: flex;
+        flex-direction: row nowrap;
+        justify-content: space-around;
+     }
+    
+     /* GALERIA FLEX */
+     .productosFlex{
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+         
+         
+     }
+
+     /* Redes flex */
+
+     .redesFlex{
+        display: flex;
+        flex-direction: row nowrap;
+        justify-content: space-between;
+        padding: 10px;
+     }
+
+     /* New & Trending */
+
+     .centrar{
+         display: flex;
+         flex-direction: column;
+         text-align: center;  
+     }
+     .color{
+        color: black;
+        font-weight: bold;
+    }
+
+     /* SHOP */
+
+     /* galeria flex */
+     .productosFlexShop{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* texto de producto */
+    .caption{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* ABOUT */
+    .textoIzquierda{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 50px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 480px){
+
+
+    body{
+        width: 100%;
+    }
+    
+    header{
+        text-align: center;
+        justify-items: center;
+    }
+
+    
+
+    h2{
+        text-align: center;
+        color: black;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    
+    
+    span{
+        margin: 8px;
+        padding: 20px;
+        height: 10px;
+        text-align:center;
+        align-content: center;
+        border-radius: 3px;
+        
+    }
+    
+    span:hover{
+        background-color: rgb(167, 165, 164);
+    }
+
+    nav{
+       font-weight: bold;
+       background-color: black;
+       border-radius: 5px;
+    }
+
+    p{
+        margin: 5px;
+    }
+
+    .color{
+        color: azure;
+        font-weight: bold;
+    }
+
+    .gridAreas{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "cabeza"  /* fila 1 */
+       "menu" /* fila 2 */
+       "portada " /* fila 3 */
+       "productosNuevos"
+       "singUpForNews" /* fila 4 */
+       "pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasShop{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+         /* fila 1 */
+       "menu"
+       "cabeza" /* fila 2 */
+       "titulo"
+       "productos" /* fila 3 */
+       "singUpForNews" /* fila 4 */
+       "pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasAbout{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+        /* fila 1 */
+       "menu" /* fila 2 */
+       "cabeza" 
+       "titulo"
+       "texto" /* fila 3 */
+       "singUpForNews" /* fila 4 */
+       "pie"
+       ;
+       /* Dimensiones */
+        
+       grid-template-rows: 100%;
+       
+    }
+
+    .gridAreasColleccion{
+        display: grid;
+       grid-template-areas:
+       /* 3 columnas y 4 filas */
+       "menu"
+       "cabeza "  /* fila 1 */
+        /* fila 2 */
+       "titulo"
+       "colleccion" /* fila 3 */
+       "singUpForNews" /* fila 4 */
+       "pie"
+       ;
+       /* Dimensiones */
+       grid-template-columns: 100%;
+       grid-template-rows: 100%;
+       
+    }
+
+    
+
+          /* MENU FLEX */
+          .flexMenu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row ;
+            justify-content:center;
+         }
+        
+         /* GALERIA FLEX */
+         .productosFlex{
+             display: flex;
+             flex-wrap: wrap;
+             flex-direction: row;
+             width: 100%;
+             justify-content: space-around;
+         }
+    
+         /* REDES FLEX */
+    
+         .redesFlex{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            
+         }
+
+    
+         /* New & Trending */
+    
+         .centrar{
+             display: flex;
+             flex-direction: column;
+             text-align: center;  
+         }
+
+         /* logo */
+         .chica{
+             width: 100%;
+             text-align: center;
+             
+         }
+
+         /* margen redes */
+         .margen{
+             margin-bottom: 20px;
+         }
+
+         .resize{
+             height: auto;
+             width: 100%;
+         }
+
+         /* SHOP */
+         .productosFlexShop{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .caption{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    /* ABOUT */
+    .textoIzquierda{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+
+}
