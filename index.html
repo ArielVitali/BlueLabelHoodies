@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODRA</title>
+    <title>Blue Label</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="assets/image/nuevas/favicon.ico">
     <!-- Estilos de BootStrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     
@@ -15,13 +16,8 @@
 
 </head>
 <body>
-    <header class="container-fluid">
+    <header id="cabeza" class="container-fluid d-none d-md-block">
         <!-- SOCIAL MEDIA -->
-
-        <!-- 
-            Intente introducir los iconos de las redes sociales dentro del menu hamburguesa y no logre hacerlo 
-         -->
-
         <div class="row gx-5 m-3">
             <ul class="nav col justify-content-center fluid" >
                 <li class="nav-item">
@@ -50,9 +46,7 @@
                 <li class="nav-item seeks">
                   <form action="/search" method="get" id="searchbox" style="display: none;">
                     <input type="text" name="q" class="search-input" id="q" placeholder="Search">
-                    
                     <input type="hidden" name="type" value="product">
-                    
                   </form>
                   <a href="#" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#212529" class="bi bi-search" viewBox="0 0 16 16">
@@ -69,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/cart" class="nav-link active">
+                    <a href="#" class="nav-link active">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#212529" class="bi bi-cart-fill" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                         </svg>
@@ -80,7 +74,7 @@
     </header>
     <main>
         <!-- FOTO INICIO -->
-        <div class="container-fluid py-4 ">
+        <div id="fotoInicio" class="container-fluid py-4 ">
             <div class="row text-center">
                 <a href="index.html">
                     <img class="img-fluid mx-auto d-block" src="assets/image/nuevas/logo5_1.png" alt="Blue Label" height="500px" width="500px">
@@ -93,32 +87,33 @@
             </div>
         </div>
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light py-5">
+        <nav id="navBar" class="navbar navbar-expand-lg navbar-light py-5">
             <div class="container-fluid">
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="col-12 col-md-3 col-xl-2 collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item box-3 ">
-                            <a class="nav-link btn btn-three" href="index.html">HOME</a>
+                            <a class="nav-link btn-three" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item box-3 ">
-                            <a class="nav-link btn btn-three" href="assets/pages/shop.html">HOODIES</a>
+                            <a class="nav-link btn-three" href="assets/pages/shop.html">HOODIES</a>
                         </li>
                         <li class="nav-item box-3 ">
-                            <a class="nav-link btn btn-three" href="assets/pages/about.html">ABOUT</a>
+                            <a class="nav-link btn-three" href="assets/pages/about.html">ABOUT</a>
                         </li>
                         <li class="nav-item dropdown box-3">
-                            <a class="nav-link dropdown-toggle btn btn-three" href="#" id="dropdown10" data-bs-toggle="dropdown" aria-expanded="false">COLLECTIONS</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown10">
-                                <li><a class="dropdown-item btn btn-three" href="#">Coll1</a></li>
-                                <li><a class="dropdown-item btn btn-three" href="#">Coll2</a></li>
-                                <li><a class="dropdown-item btn btn-three" href="#">Coll3</a></li>
-                            </ul>
+                            <a class="nav-link dropdown-toggle btn-three " href="#" id="dropdown10" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">COLLECTIONS</a>
+                            <div class="btn-group justify-content-center">
+                                <ul class="dropdown-menu " aria-labelledby="dropdown10">
+                                    <li><a class="dropdown-item btn-three text-center" href="assets/pages/collectionsBlack.html">Black Hoodies</a></li>
+                                    <li><a class="dropdown-item btn-three text-center" href="assets/pages/collectionsWhite.html">White Hoodies</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item box-3 px-1">
-                            <a class="nav-link btn btn-three" href="assets/pages/photos.html">PHOTOS</a>
+                            <a class="nav-link btn-three" href="assets/pages/photos.html">PHOTOS</a>
                         </li>
                     </ul>
                 </div>
@@ -126,142 +121,133 @@
         </nav>
         
         <!-- PORTADA -->
-        <div class="container-fluid">
-            <div class="text-center d-block py-5">
-                <img class="w-100" src="assets/image/nuevas/portada4.png" alt="Blue Label">
+        <div id="portada" class="container-fluid py-4">
+            <div class="row text-center">
+                <img class="img-fluid mx-auto" src="assets/image/nuevas/portada.png" alt="Blue Label">
             </div>
         </div>
 
         <!-- CARROUSEL -->
-
-        <!-- 
-            Intente hacer un carrousel con elementos multiples  y no logre hacerlo
-         -->
-
-        <div class="container-fluid">
+        <div id="carrousel" class="container">
             <h3 class="text-center py-5">New & Trending</h3>
-            <div id="carousel1" class="py-5 carousel slide carousel-dark text-center" data-bs-ride="carousel">
-                <!-- Inner -->
-                <div class="carousel-inner">
-                    <!-- Single item -->
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <!-- hoodie 1 -->
-                                <div class="col-lg-3 col-md-2">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop5.png" class="card-img-top"/>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner py-5 px-2">
+                    <div class="carousel-item active" data-bs-interval="5000 pause">
+                        <div class="row row-cols-3">
+                                <div class="col">
+                                    <div class="card border-0 hvr-grow">
+                                        <a href="assets/pages/shop.html"><img src="assets/image/shop1.png" class="card-img-top" alt="..."></a>
                                         <div class="card-body">
-                                            <h5 class="card-title">Hoodie 9</h5>
+                                            <h5 class="text-center card-title">Hoodie 1</h5>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- hoodie 2 -->
-                                <div class="col-lg-3 d-none d-lg-block">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop5.png" class="card-img-top"/>
+                                <div class="col">
+                                    <div class="card border-0 hvr-grow">
+                                        <a href="assets/pages/shop.html"><img src="assets/image/shop2.png" class="card-img-top" alt="..."></a>
                                         <div class="card-body">
-                                            <h5 class="card-title">Hoodie 2</h5>
+                                            <h5 class="text-center card-title">Hoodie 2</h5>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- hoodie 3 -->
-                                <div class="col-lg-3 d-none d-lg-block ">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop6.png" class="card-img-top"/>
+                                <div class="col">
+                                    <div class="card border-0 hvr-grow">
+                                        <a href="assets/pages/shop.html"><img src="assets/image/shop3.png" class="card-img-top" alt="..."></a>
                                         <div class="card-body">
-                                            <h5 class="card-title">Hoodie 2</h5>
+                                            <h5 class="text-center card-title">Hoodie 3</h5>
                                         </div>
+                                    </div>
+                                </div>  
+                        </div>
+                    </div>
+                
+                  
+                    <div class="carousel-item" data-bs-interval="5000 pause">
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop5.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 5</h5>
                                     </div>
                                 </div>
-
-                                <!-- hoodie 3 -->
-                                <div class="col-lg-3 d-none d-lg-block">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop6.png" class="card-img-top"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hoodie 2</h5>
-                                        </div>
-                                    </div>
-                                </div>   
                             </div>
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop6.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 6</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop1.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 7</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
-                    <!-- Single item -->
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <!-- hoodie 1 -->
-                                <div class="col-lg-3">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop1.png" class="card-img-top"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hoodie</h5>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- hoodie 2 -->
-                                <div class="col-lg-3 d-none d-lg-block">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop2.png" class="card-img-top"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hoodie</h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- hoodie 3 -->
-                                <div class="col-lg-3 d-none d-lg-block">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop3.png" class="card-img-top"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hoodie</h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- hoodie 3 -->
-                                <div class="col-lg-3 d-none d-lg-block">
-                                    <div class="card border-0">
-                                        <img src="assets/image/shop3.png" class="card-img-top"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hoodie</h5>
-                                        </div>
+                    <div class="carousel-item" data-bs-interval="5000 pause">
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop6.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 5</h5>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop3.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 6</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 hvr-grow">
+                                    <a href="assets/pages/shop.html"><img src="assets/image/shop2.png" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="text-center card-title">Hoodie 7</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <div class="d-flex justify-content-center mb-4">
-                    <button class="carousel-control-prev" type="button" data-bs-target="carouselControls" data-bs-slide="prev">
+            
+                <div class="">
+                    <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Prev</span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="carouselControls" data-bs-slide="next">
+                    <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <!-- Carousel wrapper -->
-            <!-- Inner -->
             </div>
-    </div>
-        <!-- Carousel wrapper -->
-
+        </div>
         
     </main>
 
-    <div class="container-fluid bs-white">
+    <div id="pie" class="container-fluid bs-white">
         <footer class="py-5">
-            <div class="row px-5">
-                <div class="col-2">
+            <div class="row mx-5">
+                <div class="col-3 row-cols-sm-2">
                     <h5>EXPLORE</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Search</a></li>
@@ -274,10 +260,10 @@
                     </ul>
                 </div>
 
-                <div class="col-5 offset-5">
+                <div class="col-4 offset-5">
                     <form>
                     <h5>SIGN UP FOR OUR NEWSLETTER</h5>
-                    <p>Stay up to date with our latest news, releases, events and special offers.</p>
+                    <p class="lead">Stay up to date with our latest news, releases, events and special offers.</p>
                     <div class="d-flex w-100 gap-2">
                         <label for="newsletter1" class="visually-hidden">Email address</label>
                         <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -317,8 +303,6 @@
     </div>
 
     <!-- JavaScript de Bootstrap -->
-    
-    
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
 </body>
