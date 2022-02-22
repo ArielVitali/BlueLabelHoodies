@@ -11119,6 +11119,10 @@ textarea.form-control-lg {
   }
 }
 /* ESTILOS PERSONALIZADOS */
+.linksFooter {
+  color: #6c757d;
+}
+
 .alinear {
   text-align: center;
 }
@@ -11141,7 +11145,8 @@ textarea.form-control-lg {
 }
 
 nav, h1, .h1, h3, .h3 {
-  font-family: "Rye", cursive;
+  font-family: "Rye";
+  font-style: cursive;
 }
 
 /* Grow */
@@ -11199,8 +11204,11 @@ nav, h1, .h1, h3, .h3 {
     opacity: 1;
   }
 }
-.btn-three {
+.boton, .btn-three {
   color: black;
+}
+
+.btn-three {
   transition: all 0.5s;
   position: relative;
 }

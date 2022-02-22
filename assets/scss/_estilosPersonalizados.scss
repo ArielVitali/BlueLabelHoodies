@@ -1,10 +1,21 @@
 
 
 // VARIABLES
-$fuente: 'Rye', cursive;
-
+$fuente:(
+  font-family: 'Rye',
+  font-style: cursive
+);
 
 /* ESTILOS PERSONALIZADOS */
+
+$estilos:(
+  color:#6c757d
+);
+
+.linksFooter{
+  color: map-get($estilos,color);
+}
+
 .alinear{
     text-align: center;
   }
@@ -28,7 +39,8 @@ $fuente: 'Rye', cursive;
   }
   
   nav,h1,h3{
-    font-family: $fuente;
+    font-family: map-get($fuente,font-family);
+    font-style: map-get($fuente, font-style );
   }
   
   
@@ -56,9 +68,12 @@ $fuente: 'Rye', cursive;
   
    @-webkit-keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}
   
+  .boton{
+    color: rgb(0, 0, 0);
+  }
   
   .btn-three {
-    color: rgb(0, 0, 0);
+    @extend .boton;
     transition: all 0.5s;
     position: relative;
   }
@@ -80,5 +95,10 @@ $fuente: 'Rye', cursive;
     opacity: 1;
     transform: scale(1,1);
   }
+
+ 
+ 
+
+
   
   /* TERMINA ESTILOS PERSONALIZADOS */
